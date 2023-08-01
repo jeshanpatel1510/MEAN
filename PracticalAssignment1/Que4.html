@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>     
+    <head>
+        <style>
+            .main{
+                width: 30%;
+                height: auto;
+                padding: 2%;
+                border: 2px dotted black;
+            }
+            #ChatDesk{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h3>My Chat App</h3>
+            <h2>Server : </h2>
+            <div id="ChatDesk"></div>
+            <hr/>
+            <h2>Client : </h2>            
+            <input type="text" id="message"  />
+            <input type="button" id="b1" onclick="sendMessage()" value="send" />
+        </div>
+        
+    </body>
+    <script>
+    var ws = new WebSocket('ws://localhost:8080');
+
+    ws.addEventListener("message", function(e) {	    
+    var msg = e.data;
+    document.getElementById('ChatDesk').innerHTML+='<br>> Server: '+ msg;
+    });
+    function sendMessage(){
+        var message = document.getElementById('message').value;
+        document.getElementById('ChatDesk').innerHTML+='<br>> Me: '+ message;
+        ws.send(message);
+        document.getElementById('message').value="";
+    }
+    </script>
+</html>

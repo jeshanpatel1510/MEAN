@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cho {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Maintanance Payment Form(GET)</h3>
+    <form action="/getRequest" method="GET">
+        <table>
+            <tr>
+                <td>
+                    <label for="block">Block : </label>
+                </td>
+                <td>
+                    <select name="block" id="block">
+                        <option value="0">Select Block</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hno">House No. : </label>
+                </td>
+                <td>
+                    <select name="hno" id="hno">
+                        <option value="101">101</option>
+                        <option value="102">102</option>
+                        <option value="103">103</option>
+                        <option value="104">104</option>
+                        <option value="105">105</option>
+                        <option value="106">106</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="block">House Owner : </label>
+                </td>
+                <td>
+                    <select name="howner" id="howner">
+                        <option value="0">Select House Owner</option>
+                        <option value="JhonDoe">Jhon Doe</option>
+                        <option value="MonaLisa">Mona Lisa</option>
+                        <option value="AlbertEinstein">Albert Einstein</option>
+                        <option value="MotherTeresa">Mother Teresa</option>
+                        <option value="AbrahamLincon">Abraham Lincon</option>
+                        <option value="QueenElizabeth">Queen Elizabeth</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Month : </label>
+                </td>
+                <td>
+                    <select name="month" id="month">
+                        <option value="0">Select Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tamount">Final Amount</label>
+                </td>
+                <td>
+                    <input type="text" name="famount" value = '&#8377;300' readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Pay Maintanance</button>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form><br><br>
+    <h3>Maintanance Payment Form(POST)</h3>
+    <form action="/getRequest" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <label for="block">Block : </label>
+                </td>
+                <td>
+                    <select name="block" id="block">
+                        <option value="0">Select Block</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hno">House No. : </label>
+                </td>
+                <td>
+                    <select name="hno" id="hno">
+                        <option value="101">101</option>
+                        <option value="102">102</option>
+                        <option value="103">103</option>
+                        <option value="104">104</option>
+                        <option value="105">105</option>
+                        <option value="106">106</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="block">House Owner : </label>
+                </td>
+                <td>
+                    <select name="howner" id="howner">
+                        <option value="0">Select House Owner</option>
+                        <option value="Jhon Doe">Jhon Doe</option>
+                        <option value="Mona Lisa">Mona Lisa</option>
+                        <option value="Albert Einstein">Albert Einstein</option>
+                        <option value="Mother Teresa">Mother Teresa</option>
+                        <option value="Abraham Lincon">Abraham Lincon</option>
+                        <option value="Queen Elizabeth">Queen Elizabeth</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Month : </label>
+                </td>
+                <td>
+                    <select name="month" id="month">
+                        <option value="0">Select Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tamount">Final Amount</label>
+                </td>
+                <td>
+                    <input type="text" name="famount" value = "&#8377;300" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Pay Maintanance"/>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br><br>
+    <h3>Node Static Server Demo : </h3>
+    <img src="./images/ss1.png" alt="IMG">
+</body>
+</html>
