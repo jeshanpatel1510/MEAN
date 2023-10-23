@@ -1,0 +1,20 @@
+<div class="col">
+    <div class="row">
+        <h4>Question 1(ii) Output </h4>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <h6>Series List : </h6>
+                <ul *ngFor="let series of series" class="list-unstyled mb-3">
+                    <li>{{series.name}}</li>
+                    <ul class="list-unstyled">
+                        <li>Cast 1 : {{series.cast1}}</li>
+                        <li>Cast 2 : {{series.cast2}}</li>
+                        <li>Episodes : {{series.episodes}}</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

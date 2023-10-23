@@ -1,0 +1,30 @@
+<div class="col">
+    <div class="row">
+        <h4>Question 1(ii) Output </h4>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <h6>Select Series </h6>
+                <div class="col-3">
+                    <select class="mb-3 form-control" #SeriesList (change)="displaySeries(SeriesList.value)">
+                        <option value="0"> -- SERIES --</option>
+                        <option *ngFor="let series of series" value={{series.name}}> {{series.name}} </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h6>Selected Series</h6>
+                <div *ngFor="let series of series">
+                    <ul *ngIf="series.name === selectedValue" class="list-unstyled">
+                        <li>{{series.name}}</li>
+                        <li>Cast 1 : {{series.cast1}}</li>
+                        <li>Cast 2 : {{series.cast2}}</li>
+                        <li>Episodes : {{series.episodes}}</li>
+                        <div #elseBlock></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

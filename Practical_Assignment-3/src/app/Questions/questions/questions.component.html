@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="col">
+        <div class="row mt-5">
+            <a href="#" class="h4 text-dark text-decoration-none">Question 1 : Create Angular application with routing
+                link assigned for following requirements</a>
+            <ul class="list-unstyled">
+                <li class="my-1">Display integer, sting, date data in a component. <button type="button"
+                        class="btn btn-secondary" (click)="buttonClick('que1')">View Output</button></li>
+                <li class="my-1">Display array values in html list. <button type="button" class="btn btn-secondary" (click)="buttonClick('que2')">View
+                        Output</button></li>
+                <li class="my-1">Display array in combo. <button type="button" class="btn btn-secondary" (click)="buttonClick('que3')">View
+                        Output</button></li>
+                <li class="my-1">Take a combo with two values (textbox, textarea). Display textbox or textarea depending
+                    on selection
+                    of a combo. <button type="button" class="btn btn-secondary" (click)="buttonClick('que4')">View Output</button></li>
+                <li class="my-1">Make another component for user input form with user’s personal details, take input and
+                    display data
+                    on submit. <button type="button" class="btn btn-secondary" (click)="buttonClick('que5')">View Output</button></li>
+            </ul>
+            <div id="que1Output" class="my-2">
+                <app-que1 *ngIf="que1"></app-que1>
+                <app-que2 *ngIf="que2"></app-que2>
+                <app-que3 *ngIf="que3"></app-que3>
+                <app-que4 *ngIf="que4"></app-que4>
+                <app-que5 *ngIf="que5"></app-que5>
+            </div>
+            <h5 href="#" class="h5 text-dark text-decoration-none mt-3">Question 2 : Design and develop shopping cart
+                system <button type="button" class="btn btn-secondary" routerLink="cineworld" routerLinkActive="active">View Output</button></h5>
+            <ul class="list-unstyled">
+                <li>Backend - Products (CRUD) API in Express.</li>
+                <li>Frontend</li>
+                <ul>
+                    <li>Call CRUD API</li>
+                    <li>Display products in grid (3xn)</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>

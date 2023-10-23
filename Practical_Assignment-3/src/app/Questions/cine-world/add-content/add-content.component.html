@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <div class="container">
+        <div class="col-6 mt-3">
+            <div class="row mb-2">
+                <h4>Create Content</h4>
+                <hr>
+            </div>
+            <div class="row col-md-10">
+                <form [formGroup]="form" (submit)="addContent()">
+                    <div class="row form-group my-2">
+                        <label class="form-label">Movie or Series Name</label>
+                        <input type="text" formControlName="name" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast1 Name</label>
+                        <input type="text" formControlName="cast1" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast2 Name</label>
+                        <input type="text" formControlName="cast2" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Episodes</label>
+                        <input type="number" formControlName="episodes" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Aired On</label>
+                        <input type="date" formControlName="aired" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Poster</label>
+                        <input type="file" class="form-control" (change)="fileUpload($event)">
+                    </div>
+                    <div class="row form-group my-3">
+                        <div class="col-3">
+                            <input type="submit" value="Save" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

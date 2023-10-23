@@ -1,0 +1,26 @@
+<div class="col">
+    <div class="row">
+        <h4>Question 1(iv) Output </h4>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <h6>Select Input Type</h6>
+                <select #inputType class="form-control" (change)="onSelectChange(inputType.value)">
+                    <option value="0"></option>
+                    <option value="input"> Input Box </option>
+                    <option value="textarea"> Text Area </option>
+                </select>
+            </div>
+            <div class="row my-2">
+                <div class="form-group">
+                    <input type="text" #texbox (keyup)="getValue(texbox.value)" class="form-control my-1" placeholder="Enter TextBox Value" *ngIf="text_box" />
+                    <textarea cols="10" #texarea (keyup)="getValue(texarea.value)" rows="5" class="form-control my-1" placeholder="Enter Textarea Text" *ngIf="text_area"></textarea>
+                </div>
+            </div>
+            <div class="row my-2">
+                <span>{{value}}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <div class="container">
+        <div class="col-6 mt-3">
+            <div class="row mb-2">
+                <h4>Edit Content</h4>
+                <hr>
+            </div>
+            <div class="row col-md-10">
+                <form [formGroup]="form" (submit)="editContent()">
+                    <div class="row form-group my-2">
+                        <label class="form-label">Movie or Series Name</label>
+                        <input type="text" formControlName="Name" [(ngModel)]="content[0].Name" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast1 Name</label>
+                        <input type="text" formControlName="Cast1" [(ngModel)]="content[0].Cast1" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast2 Name</label>
+                        <input type="text" formControlName="Cast2" [(ngModel)]="content[0].Cast2" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Episodes</label>
+                        <input type="number" formControlName="Episodes" [(ngModel)]="content[0].Episodes" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Aired On</label>
+                        <input type="date" formControlName="Aired" [(ngModel)]="content[0].Aired" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Poster</label>
+                        <input type="file" class="form-control" (change)="onImageChange($event)" [(ngModel)]="content[0].Image">
+                    </div>
+                    <div class="row form-group my-3">
+                        <div class="col-3">
+                            <input type="submit" value="Edit" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

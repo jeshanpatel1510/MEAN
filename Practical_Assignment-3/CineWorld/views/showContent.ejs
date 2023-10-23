@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <title>Contents</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col mt-3 text-center">
+            <div class="row">
+                <div class="col-7 text-end">
+                    <h4>Content List</h4>
+                </div>
+                <div class="col-5 text-end">
+                    <a href="/create" class="btn-btn-primary text-decoration-none">Create +</a>
+                </div>
+                <hr>
+            </div>
+            <div class="row overflow-hidden">
+                <% if (contents == "") { %>
+                    <h2 class="text-center">No Content Found!!</h2>
+                <% } else { %> 
+                    <% contents.forEach((content)=>{ %>
+                        <div class="col-3 my-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="card-img">
+                                        <img src="images/<%= content.Image %>" width="225" height="250" class="object-fit-cover"/>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <h4><%= content.Name %></h4>
+                                        <label class="form-label">Cast1 : <%= content.Cast1 %></label>
+                                        <label class="form-label">Cast2 : <%= content.Cast2 %></label>
+                                        <label class="form-label">Episodes : <%= content.Episodes %></label>
+                                        <label class="form-label">Aired On : <%= content.Aired %></label>
+                                    </div>
+                                    <div class="row mt-2 gap-1">
+                                        <div class="col-3">
+                                            <a href="/content/<%= content._id %>" class="btn btn-info text-decoration-none">Watch</a>
+                                        </div>
+                                        <div class="col-3 mx-2">
+                                            <a href="/edit/<%= content._id %>" class="btn btn-primary text-decoration-none">Update</a>
+                                        </div>
+                                        <div class="col-3 mx-2">
+                                            <a href="/delete/<%= content._id %>" class="btn btn-danger text-decoration-none">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>               
+                    <% }) %>                   
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

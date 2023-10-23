@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>Edit Content</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-6 mt-3">
+            <div class="row mb-2">
+                <h4>Edit Content</h4>
+                <hr>
+            </div>
+            <div class="row col-md-10">
+                <% if (contents == "") { %>
+                    <h2 class="text-center">No Content Found!!</h2>
+                <% } else { %>
+                    <% contents.forEach((content)=>{ %>
+                        <form action="/edit/<%= content._id %>" method="post" enctype="multipart/form-data">
+                            <div class="row form-group my-2">
+                                <label class="form-label">Movie or Series Name</label>
+                                <input type="text" name="name" class="form-control" value="<%= content.Name %>">
+                            </div>
+                            <div class="row form-group my-2">
+                                <label class="form-label">Cast1 Name</label>
+                                <input type="text" name="cast1" class="form-control" value="<%= content.Cast1 %>">
+                            </div>
+                            <div class="row form-group my-2">
+                                <label class="form-label">Cast2 Name</label>
+                                <input type="text" name="cast2" class="form-control" value="<%= content.Cast2 %>">
+                            </div>
+                            <div class="row form-group my-2">
+                                <label class="form-label">Episodes</label>
+                                <input type="number" name="episodes" class="form-control" value="<%= content.Episodes %>">
+                            </div>
+                            <div class="row form-group my-2">
+                                <label class="form-label">Aired On</label>
+                                <input type="date" name="aired" class="form-control" value="<%= content.Aired %>">
+                            </div>
+                            <div class="row form-group my-2">
+                                <label class="form-label">Poster</label>
+                                <input type="file" name="poster" class="form-control" src="images/<%= content.Image %>">
+                            </div>
+                            <div class="row form-group my-3">
+                                <div class="col-3">
+                                    <input type="submit" name="submit" class="btn btn-primary">
+                                </div>
+                            </div>
+                        </form>
+                <% }) } %> 
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</html>

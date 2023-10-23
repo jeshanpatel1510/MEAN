@@ -1,0 +1,70 @@
+<div class="container-fluid">
+    <app-header></app-header>
+    <div class="container">
+        <div class="col mt-4">
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="btn btn-danger" (click)="removeAll()">Remove All</button>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <h3>Watch List</h3>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <label class="form-label fs-5">Total Episodes : {{total}}</label>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" *ngIf="content.length > 0">
+                    <div class="row mb-3" *ngFor="let content of content">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="card-img m-2">
+                                        <img src="http://localhost:8080/images/{{content.Image}}" width="175" height="175" class="object-fit-cover">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="row px-5">
+                                            <h3 class="card-title">{{content.Name}}</h3>
+                                        </div>
+                                        <div class="row text-left my-4 px-5">
+                                            <div class="col-5">
+                                                <div class="row">
+                                                    <label class="form-label fs-5">
+                                                        Cast1 : {{content.Cast1}}
+                                                    </label>
+                                                    <label class="form-label fs-5">
+                                                        Cast2 : {{content.Cast2}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="row">
+                                                    <label class="form-label fs-5">
+                                                        Episodes : {{content.Episodes}}
+                                                    </label>
+                                                    <label class="form-label fs-5">
+                                                        Aired On : {{content.Aired}}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 text-center py-5">
+                                    <button class="btn btn-danger" (click)="removeContent(content._id)">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

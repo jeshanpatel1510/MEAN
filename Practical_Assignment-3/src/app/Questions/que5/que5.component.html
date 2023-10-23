@@ -1,0 +1,54 @@
+<div class="col">
+    <div class="row">
+        <h4>Question 1(v) Output </h4>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <form (submit)="onFormSubmit($event)">
+                <div class="row my-2">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="name" class="form-control" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" class="form-control" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="text" name="mobile" class="form-control" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="form-group">
+                        <label>City</label>
+                        <select name="city" class="form-control">
+                            <option value="0"></option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Vadodara">Vadodara</option>
+                            <option value="Navsari">Navsari</option>
+                            <option value="Bharuch">Bharuch</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-6">
+                        <input type="submit" value="Save" class="btn btn-primary">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row my-2" *ngIf="output">
+        <h5>User Details : </h5>
+        <p>Full Name : {{name}}</p>
+        <p>Email : {{email}}</p>
+        <p>Mobile No. : {{mobile}}</p>
+        <p>City : {{city}}</p>
+    </div>
+</div>

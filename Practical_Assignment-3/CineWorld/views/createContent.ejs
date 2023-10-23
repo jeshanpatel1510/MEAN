@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <title>Create Content</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="col-6 mt-3">
+            <div class="row mb-2">
+                <h4>Create Content</h4>
+                <hr>
+            </div>
+            <div class="row col-md-10">
+                <form action="/create" method="post" enctype="multipart/form-data">
+                    <div class="row form-group my-2">
+                        <label class="form-label">Movie or Series Name</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast1 Name</label>
+                        <input type="text" name="cast1" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Cast2 Name</label>
+                        <input type="text" name="cast2" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Episodes</label>
+                        <input type="number" name="episodes" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Aired On</label>
+                        <input type="date" name="aired" class="form-control">
+                    </div>
+                    <div class="row form-group my-2">
+                        <label class="form-label">Poster</label>
+                        <input type="file" name="poster" class="form-control">
+                    </div>
+                    <div class="row form-group my-3">
+                        <div class="col-3">
+                            <input type="submit" name="submit" class="btn btn-primary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
